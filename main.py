@@ -9,5 +9,7 @@ path = asksaveasfilename(defaultextension='.png', filetypes=[('images', '*.png')
 if im is not None:
     im.save(path, 'PNG')
     messagebox.showinfo("done!", "your image saved :)")
+elif path == '':
+    messagebox.showerror("cancel", "you cancel operation!")
 else:
-    messagebox.showerror("image not fount", "your clipboard doesnt have image")
+    messagebox.showerror("image doesn't exist", 'i cant find image in your clipboard!')
