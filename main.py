@@ -4,7 +4,10 @@ from tkinter.filedialog import asksaveasfilename
 from tkinter import messagebox
 im = ImageGrab.grabclipboard()
 Tk().withdraw()
-path = asksaveasfilename(defaultextension='.png', filetypes=[('images', '*.png')], title='where save screen shot')
+path = asksaveasfilename(defaultextension='.png',
+                         filetypes=[('images', '*.png')],
+                         title='where save screen shot',
+                         initialfile='screenShot.png')
 
 if im is not None:
     im.save(path, 'PNG')
